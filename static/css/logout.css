@@ -1,0 +1,32 @@
+.data{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+
+#ret{
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    outline: 2px solid red;
+    margin-right: 50px;
+}
+
+#xox{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.sos{
+    margin-top: 20px;
+    text-align: end;
+}
+
+.dod{
+    padding-top: 20px;
+}
+
+#ret:hover{
+    color: white;
+    background-color: red;
+}

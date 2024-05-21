@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if Not %}
+<div class="not">
+    <h1 id="stop" >Вам сюда нельзя!</h1>
+    <img id="qwep" src="{% static 'staticphoto/404.png' %}" alt="">
+</div>
+{% else %}
+    <span id="hello" >Привет, {{ user.username }}!</span>
+    <a id="o" onclick="document.getElementById('modal').style.display = 'block'">Выйти</a>
+{% endif %}
+
+{% endblock %}

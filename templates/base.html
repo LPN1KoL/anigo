@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% block head %}
+
+{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div class="ljhs">
+            <a id="hom" href="/">AniGo</a>
+            <a id="random" href="/random">Случайное аниме</a>
+        </div>
+
+        <div class="filler">
+            <input type="text" id="search" placeholder="Поиск" oninput="showsearch(this.value)" onfocus="showsearch()">
+        </div>
+        {% if request.user.is_authenticated %}
+        <div class="prof">
+            <a id="usrname" href="/profile/{{request.user.id}}">{{ request.user.username }}</a>
+            <img id="usricon" src="{% static 'staticphoto/us_icon.png' %}">
+        </div>
+        {% else %}
+            <a id="log" href="/login">Войти</a>
+        {% endif %}
+    </div>
+    <div id="modal" class="modal">
+        <span id="nadpis">Хотите выйти?</span>
+        <div class="btns">
+            <a id="yes" href="/llog">Выйти</a>
+            <button id="no" type="button" onclick="document.getElementById('modal').style.display = 'none'">Отмена</button>
+        </div>
+    </div>
+    <div class="modal" id="mod">
+        <span class="modal" id="res">Результаты поиска:</span>
+        <div class="modal" id="anims">
+
+        </div>
+    </div>
+{% block content %}
+{% endblock %}
+    <script src="{% static 'js/base.js' %}"></script>
+
+</body>
+</html>

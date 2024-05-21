@@ -1,0 +1,26 @@
+#hello{
+    font-size: 30px;
+    margin: 30px;
+}
+
+#stop{
+    margin: 20px;
+}
+
+.not{
+    text-align: center;
+}
+
+#o{
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    outline: 2px solid red;
+    margin-right: 50px;
+}
+
+#o:hover{
+    color: white;
+    background-color: red;
+}
